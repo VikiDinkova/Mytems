@@ -2403,3 +2403,8 @@ a {
   margin-top: 10px;
   padding-right: 15px;
 }
+
+.add {
+  font-size: 30px;
+  text-align: center;
+}

@@ -2,7 +2,8 @@ from django.contrib.auth import login as login_user, authenticate, logout
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
-from Mytems.home.forms import RegisterForm
+from .forms import RegisterForm
+from .models import Drug, Clothes, TechAccessory
 
 
 def index(request):
@@ -77,3 +78,27 @@ def register(request):
 def logout_user(request):
     logout(request)
     return redirect('home:index')
+
+
+def drugs(request):
+    all_drugs = Drug.objects.all()
+    context = {
+        'drugs': all_drugs
+    }
+    return render(request, 'drugs.html', context)
+
+
+def clothes(request):
+    all_clothes = Clothes.objects.all()
+    context = {
+        'drugs': all_clothes
+    }
+    return render(request, 'clothes.html', context)
+
+
+def techaccessoaries(request):
+    all_tech = TechAccessory.objects.all()
+    context = {
+        'tech': all_tech
+    }
+    return render(request, 'tech.html', context)

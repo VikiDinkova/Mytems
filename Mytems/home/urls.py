@@ -14,4 +14,7 @@ urlpatterns = [
     url(r'^add_tech$', views.add_tech, name='add_tech'),
     url(r'^register$', views.register, name='register'),
     url(r'^logout$', views.logout_user, name='logout'),
+    url(r'^drugs$', views.drugs, name='drugs'),
+    url(r'^clothes', views.clothes, name='clothes'),
+    url(r'^tech', views.techaccessoaries, name='tech'),
 ]

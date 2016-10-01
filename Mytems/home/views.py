@@ -6,7 +6,6 @@ from .forms import RegisterForm
 from .models import Drug, Clothes, TechAccessory
 
 
-
 def index(request):
     return render(request, 'category.html', {})
 

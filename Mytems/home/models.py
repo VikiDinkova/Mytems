@@ -3,7 +3,7 @@ from django.db import models
 
 class Drug(models.Model):
     name = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='images')
+    image = models.ImageField(upload_to='media/images')
     brand = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     defloration_date = models.DateField(blank=True, null=True)
@@ -36,7 +36,7 @@ class Clothes(models.Model):
     )
 
     name = models.CharField(max_length=50)
-    images = models.ImageField(upload_to='images')
+    images = models.ImageField(upload_to='media/images')
     gender = models.IntegerField(choices=GENDER_CHOICES)
     seasons = models.IntegerField(choices=SEASON_CHOICES)
     description = models.TextField()
@@ -46,14 +46,14 @@ class Clothes(models.Model):
 
 class TechAccessory(models.Model):
     name = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='images')
+    image = models.ImageField(upload_to='media/images')
     for_tech = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
 
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='images')
+    image = models.ImageField(upload_to='media/images')
     genre = models.CharField(max_length=50)
     author = models.CharField(max_length=50)
     location = models.CharField(max_length=100)

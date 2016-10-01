@@ -65,13 +65,14 @@
 								<div class="row">									
 										
 	<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+{% for drug in drugs %}
 		<div class="col-sm-6 col-md-4 wow fadeInUp">
 			<div class="products">
 				
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
-				<a href="detail.html"><img  src="assets/images/blank.gif" data-echo="assets/images/products/c3.jpg" alt=""></a>
+				<a href="detail.html"><img  src="{{MEDIA_URL}}{{ drug.image.url }}" data-echo="{{MEDIA_URL}}{{ drug.image.url }}" alt=""></a>
 			</div><!-- /.image -->			
 
 		</div><!-- /.product-image -->
@@ -104,6 +105,7 @@
       
 			</div><!-- /.products -->
 		</div><!-- /.item -->
+{% endfor %}
 			<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 										</div><!-- /.row -->
 							</div><!-- /.category-product -->
@@ -113,7 +115,9 @@
 						<div class="tab-pane "  id="list-container">
 							<div class="category-product  inner-top-vs">
 							
-<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->						
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+{% for drug in drugs %}
+
 		<div class="category-product-inner wow fadeInUp">
 			<div class="products">				
 	            <div class="product-list product">
@@ -151,6 +155,8 @@
 	   </div><!-- /.product-list -->
 			</div><!-- /.products -->
 		</div><!-- /.category-product-inner -->
+
+{% endfor %}
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 		

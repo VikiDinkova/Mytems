@@ -8,4 +8,8 @@ urlpatterns = [
     url(r'^detail$', views.detail, name='detail'),
     url(r'^faq$', views.faq, name='faq'),
     url(r'^sign_in$', views.sign_in, name='sign_in'),
+    url(r'^add_book$', views.add_book, name='add_book'),
+    url(r'^add_clothes$', views.add_clothes, name='add_clothes'),
+    url(r'^add_medicine$', views.add_medicine, name='add_medicine'),
+    url(r'^add_tech$', views.add_tech, name='add_tech'),
 ]

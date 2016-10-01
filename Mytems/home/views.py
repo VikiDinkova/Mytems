@@ -62,6 +62,10 @@ def add_tech(request):
     return render(request, 'add_tech.html', {})
 
 
+def add_item(request):
+    return render(request, 'add_item.html', {})
+
+
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)

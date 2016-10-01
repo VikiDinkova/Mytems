@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^drugs$', views.drugs, name='drugs'),
     url(r'^clothes', views.clothes, name='clothes'),
     url(r'^tech', views.techaccessoaries, name='tech'),
+    url(r'^add_item', views.add_item, name='add_item'),
 ]

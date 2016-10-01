@@ -2408,3 +2408,8 @@ a {
   font-size: 30px;
   text-align: center;
 }
+
+.image img {
+    height: 341px;
+    width: 270px;
+}

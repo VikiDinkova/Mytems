@@ -2,7 +2,7 @@ from django.contrib.auth import login as login_user, authenticate, logout
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
-from Mytems.home.forms import RegisterForm
+from .forms import RegisterForm
 
 
 def index(request):

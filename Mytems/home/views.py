@@ -13,14 +13,6 @@ def error(request):
     return render(request, '404.html', {})
 
 
-def detail(request):
-    return render(request, 'detail.html', {})
-
-
-def faq(request):
-    return render(request, 'faq.html', {})
-
-
 def sign_in(request):
     data = {
         'error': None,

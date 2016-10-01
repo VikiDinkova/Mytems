@@ -1,0 +1,50 @@
+{% include "header.html" %}
+{% load static %}
+
+
+<div class="body-content outer-top-bd">
+    <div class="container">
+        <div class="sign-in-page inner-bottom-sm">
+            <div class="row">
+                <!-- Sign-in -->            
+<div class="col-md-12 col-sm-12 sign-in">
+    <h4 class="">add clothes</h4>
+    <form class="register-form outer-top-xs" role="form">
+        <div class="form-group">
+            <label class="info-title" for="clothesName">Name <span>*</span></label>
+            <input type="text" class="form-control unicase-form-control text-input">
+        </div>
+        <div class="form-group">
+            <label class="info-title" for="clothesGender">Gender <span>*</span></label>
+            <input type="text" class="form-control unicase-form-control text-input">
+        </div>
+        <div class="form-group">
+            <label class="info-title" for="clothesSeasons">Seasons <span>*</span></label>
+            <input type="text" class="form-control unicase-form-control text-input">
+        </div>
+        <div class="form-group">
+            <label class="info-title" for="clothesColor">Color <span>*</span></label>
+            <input type="text" class="form-control unicase-form-control text-input">
+        </div>
+        <div class="form-group">
+            <label class="info-title" for="clothesDescription">Description <span>*</span></label>
+            <textarea class="form-control unicase-form-control text-input"></textarea>
+        </div>
+        <div class="form-group">
+            <label class="info-title" for="clothesLocation">Location <span>*</span></label>
+            <input type="text" class="form-control unicase-form-control text-input">
+        </div>
+        <div class="form-group">
+            <label class="info-title" for="clothesPhoto">Photo <span>*</span></label>
+            <input type="file" name="pic" accept="image/*">
+        </div>
+        
+        
+        <button type="submit" class="col-md-12 col-sm-12 col-lg-12 col-xs-12 btn-upper btn btn-primary checkout-page-button">Add</button>
+    </form>                 
+</div>
+</div><!-- /.row -->
+        </div><!-- /.sigin-in-->
+        </div><!-- /.container -->
+</div><!-- /.body-content -->
+{% include 'footer.html' %}

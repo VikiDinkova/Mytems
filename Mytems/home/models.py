@@ -4,9 +4,9 @@ from django.db import models
 class Drug(models.Model):
     name = models.CharField(max_length=50)
     image = models.ImageField(upload_to='images')
-    brand = models.CharField(max_length=50, blank=True)
-    description = models.TextField(blank=True)
-    defloration_date = models.DateField(blank=True)
+    brand = models.CharField(max_length=50, blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
+    defloration_date = models.DateField(blank=True, null=True)
     expiration_date = models.DateField()
 
 

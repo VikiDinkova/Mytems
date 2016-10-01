@@ -3,11 +3,21 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
 from .forms import RegisterForm
-from .models import Drug, Clothes, TechAccessory
+from .models import Drug, Clothes, TechAccessory, Book
 
 
 def index(request):
-    return render(request, 'category.html', {})
+    drugs_all = Drug.objects.all()
+    clothes_all = Clothes.objects.all()
+    tech_accessories_all = TechAccessory.objects.all()
+    books_all = Book.objects.all()
+    context = {
+        'drugs': drugs_all,
+        'clothes': clothes_all,
+        'tech_accessories': tech_accessories_all,
+        'books': books_all
+    }
+    return render(request, 'category.html', context)
 
 
 def error(request):
@@ -83,7 +93,7 @@ def drugs(request):
 def clothes(request):
     all_clothes = Clothes.objects.all()
     context = {
-        'drugs': all_clothes
+        'clothes': all_clothes
     }
     return render(request, 'clothes.html', context)
 

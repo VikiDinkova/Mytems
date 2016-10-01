@@ -2081,7 +2081,7 @@ a {
   }
   .product .product-image .image img {
     width: 100%;
-    height: auto;
+    height: 347px;
     display: block;
   }
   .header-nav .yamm .dropdown-menu {
@@ -2103,7 +2103,7 @@ a {
   }
   .hot-deal-wrapper .image img {
     width: 100%;
-    height: auto;
+    height: 347px;
     display: block;
   }
   .seller-product .products .product .product-info .name {
@@ -2155,7 +2155,7 @@ a {
   }
   .product .product-image .image img {
     width: 100%;
-    height: auto;
+    height: 347px;
     display: block;
   }
 
@@ -2412,4 +2412,8 @@ a {
 .image img {
     height: 341px;
     width: 270px;
+}
+
+.btn-group>.btn:first-child {
+    margin-right: 20px;
 }

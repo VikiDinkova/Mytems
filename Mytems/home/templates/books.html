@@ -65,21 +65,21 @@
 								<div class="row">
 
 	<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-{% for cloth in clothes %}
+{% for book in books %}
 		<div class="col-sm-6 col-md-4 wow fadeInUp">
 			<div class="products">
 
 	<div class="product">
 		<div class="product-image">
 			<div class="image">
-				<a href="#"><img  src="{{MEDIA_URL}}{{ cloth.images.url }}" data-echo="{{MEDIA_URL}}{{ cloth.images.url }}" alt=""></a>
+				<a href="#"><img  src="{{MEDIA_URL}}{{ book.image.url }}" data-echo="{{MEDIA_URL}}{{ book.image.url }}" alt=""></a>
 			</div><!-- /.image -->
 
 		</div><!-- /.product-image -->
 
 
 		<div class="product-info text-left">
-			<h3 class="name"><a href="#">{{ cloth.name }}</a></h3>
+			<h3 class="name"><a href="#">{{ book.name }}</a></h3>
 			<div class="rating rateit-small"></div>
 			<div class="description"></div>
 
@@ -116,7 +116,7 @@
 							<div class="category-product  inner-top-vs">
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-{% for cloth in clothes %}
+{% for book in books %}
 		<div class="category-product-inner wow fadeInUp">
 			<div class="products">
 	            <div class="product-list product">
@@ -124,15 +124,15 @@
 		<div class="col col-sm-4 col-lg-4">
 			<div class="product-image">
 				<div class="image">
-					<img data-echo="{{MEDIA_URL}}{{ cloth.images.url }}" src="{{MEDIA_URL}}{{ cloth.images.url }}" alt="">
+					<img data-echo="{{MEDIA_URL}}{{ book.image.url }}" src="{{MEDIA_URL}}{{ book.image.url }}" alt="">
 				</div>
 			</div><!-- /.product-image -->
 		</div><!-- /.col -->
 		<div class="col col-sm-8 col-lg-8">
 			<div class="product-info">
-				<h3 class="name"><a href="#">{{ cloth.name }}</a></h3>
+				<h3 class="name"><a href="#">{{ book.name }}</a></h3>
 				<div class="rating rateit-small"></div>
-				<div class="description m-t-10">{{ cloth.description }}</div>
+				<div class="description m-t-10">{{ book.genre }}</div>
                 				<div class="cart clearfix animate-effect">
 					<div class="action">
 						<ul class="list-unstyled">

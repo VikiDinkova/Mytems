@@ -2,7 +2,7 @@ from django.contrib.auth import login as login_user, authenticate, logout
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
-from .forms import RegisterForm
+from .forms import RegisterForm, DrugForm, ClothesForm, BookForm, TechAccessoryForm, ClothesUse, TechUseForm
 from .models import Drug, Clothes, TechAccessory, Book
 
 
@@ -47,19 +47,55 @@ def sign_in(request):
 
 
 def add_book(request):
-    return render(request, 'add_book.html', {})
+    if request.method == "POST":
+        book_form = BookForm(request.POST)
+        if book_form.is_valid():
+            book_form.save()
+    else:
+        book_form = BookForm()
+    context = {
+        'book_form': book_form
+    }
+    return render(request, 'add_book.html', context)
 
 
 def add_clothes(request):
-    return render(request, 'add_clothes.html', {})
+    if request.method == "POST":
+        clothes_form = ClothesForm(request.POST)
+        if clothes_form.is_valid():
+            clothes_form.save()
+    else:
+        clothes_form = ClothesForm()
+    context = {
+        'clothes_form': clothes_form
+    }
+    return render(request, 'add_clothes.html', context)
 
 
 def add_medicine(request):
-    return render(request, 'add_medicine.html', {})
+    if request.method == "POST":
+        drug_form = DrugForm(request.POST)
+        if drug_form.is_valid():
+            drug_form.save()
+    else:
+        drug_form = DrugForm()
+    context = {
+        'drug_form': drug_form
+    }
+    return render(request, 'add_medicine.html', context)
 
 
 def add_tech(request):
-    return render(request, 'add_tech.html', {})
+    if request.method == "POST":
+        tech_form = TechAccessoryForm(request.POST)
+        if tech_form.is_valid():
+            tech_form.save()
+    else:
+        tech_form = TechAccessoryForm()
+    context = {
+        'tech_form': tech_form
+    }
+    return render(request, 'add_tech.html', context)
 
 
 def add_item(request):

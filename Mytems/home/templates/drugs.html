@@ -10,16 +10,16 @@
     <nav class="yamm megamenu-horizontal" role="navigation">
         <ul class="nav">
             <li class="dropdown menu-item">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Clotes</a>
+                <a href="{% url 'home:clothes' %}" class="dropdown-toggle">Clotes</a>
             </li><!-- /.menu-item -->
             <li class="dropdown menu-item">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tech Accessories</a>
+                <a href="{% url 'home:tech' %}" class="dropdown-toggle">Tech Accessories</a>
             </li><!-- /.menu-item -->
             <li class="dropdown menu-item">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Medicine</a>
+                <a href="{% url 'home:drugs' %}" class="dropdown-toggle">Medicine</a>
             </li><!-- /.menu-item -->
             <li class="dropdown menu-item">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bookswow </a>
+                <a href="{% url 'home:books' %}" class="dropdown-toggle">Books</a>
             </li><!-- /.menu-item -->
 
         </ul><!-- /.nav -->
@@ -79,7 +79,7 @@
 			
 		
 		<div class="product-info text-left">
-			<h3 class="name"><a href="detail.html">Samsung Galaxy S4</a></h3>
+			<h3 class="name"><a href="detail.html">{{ drug.name }}</a></h3>
 			<div class="rating rateit-small"></div>
 			<div class="description"></div>
 
@@ -125,15 +125,15 @@
 		<div class="col col-sm-4 col-lg-4">
 			<div class="product-image">
 				<div class="image">
-					<img data-echo="assets/images/products/c1.jpg" src="assets/images/blank.gif" alt="">
+					<img data-echo="{{MEDIA_URL}}{{ drug.image.url }}" src="{{MEDIA_URL}}{{ drug.image.url }}" alt="">
 				</div>
 			</div><!-- /.product-image -->
 		</div><!-- /.col -->
 		<div class="col col-sm-8 col-lg-8">
 			<div class="product-info">
-				<h3 class="name"><a href="detail.html">Simple Products Demo Showcase</a></h3>
+				<h3 class="name"><a href="detail.html">{{ drug.name }}</a></h3>
 				<div class="rating rateit-small"></div>
-				<div class="description m-t-10">Suspendisse posuere arcu diam, id accumsan eros pharetra ac. Nulla enim risus, facilisis bibendum gravida eget, lacinia id purus. Suspendisse posuere arcu diam, id accumsan eros pharetra ac. Nulla enim risus, facilisis bibendum gravida eget.</div>
+				<div class="description m-t-10">{{ drug.description }}</div>
                 				<div class="cart clearfix animate-effect">
 					<div class="action">
 						<ul class="list-unstyled">

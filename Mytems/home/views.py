@@ -78,12 +78,13 @@ def register(request):
             )
             user.set_password(request.POST['password'])
             user.save()
-    return redirect('home:index')
+
+    return render(request, 'sign-in.html', {})
 
 
 def logout_user(request):
     logout(request)
-    return redirect('home:index')
+    return redirect('home:sign_in')
 
 
 def drugs(request):
@@ -108,3 +109,11 @@ def techaccessoaries(request):
         'tech': all_tech
     }
     return render(request, 'tech.html', context)
+
+
+def books(request):
+    all_books = Book.objects.all()
+    context = {
+        'books': all_books
+    }
+    return render(request, 'books.html', context)
